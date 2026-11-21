@@ -1,0 +1,27 @@
+CARA BUILD APK ZXZ PARENT MONITOR (VERSI WORKFLOW DIPERBAIKI)
+
+Perbaikan:
+- Menghapus kebutuhan paket SDK lama bernama `tools`.
+- Memasang platform-tools, Android API 35, dan Build Tools 35.0.0 secara eksplisit.
+- Menambahkan import Kotlin `toRequestBody` yang diperlukan MainActivity.
+- Workflow memakai JDK 17 dan Gradle 8.9 yang sesuai dengan Android Gradle Plugin 8.7.3.
+
+UPLOAD TANPA SATU-SATU:
+1. Ekstrak ZIP ini di HP/komputer.
+2. Buat repository GitHub baru.
+3. Gunakan aplikasi Git/GitHub Desktop atau Termux untuk mengirim SELURUH isi folder
+   `ZXZ_PARENT_MONITOR_FULL` ke repository. GitHub web tidak mendukung upload folder
+   utuh secara konsisten dari browser HP.
+4. Pastikan folder `.github` ikut ter-upload. Jika tidak terlihat di file manager,
+   aktifkan tampilkan file tersembunyi.
+5. Buka tab Actions > Build Android APK > Run workflow.
+6. Setelah selesai hijau, buka run tersebut dan unduh artifact
+   `ZXZ-PARENT-MONITOR-DEBUG-APK`.
+7. Ekstrak artifact ZIP untuk mendapatkan `app-debug.apk`.
+
+Catatan:
+- Ini workflow untuk APK debug/testing, bukan release APK bertanda tangan Play Store.
+- Build belum dijalankan di lingkungan ini; keberhasilan final harus dikonfirmasi oleh
+  hasil GitHub Actions.
+- Remote live camera/WebRTC masih berupa fondasi/placeholder; aplikasi belum melakukan
+  streaming kamera jarak jauh.
